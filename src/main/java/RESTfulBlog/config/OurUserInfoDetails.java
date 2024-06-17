@@ -1,6 +1,6 @@
-package com.springSecurityUpdated.springSecurityUpdated.config;
+package RESTfulBlog.config;
 
-import com.springSecurityUpdated.springSecurityUpdated.model.OurUser;
+import RESTfulBlog.model.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -15,7 +15,7 @@ public class OurUserInfoDetails implements UserDetails {
     private String password;
     private List<GrantedAuthority> roles;
 
-    public OurUserInfoDetails(OurUser ourUser){
+    public OurUserInfoDetails(User ourUser){
         this.email = ourUser.getEmail();
         this.password = ourUser.getPassword();
         this.roles = Arrays.stream(ourUser.getRoles().split(","))

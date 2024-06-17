@@ -1,5 +1,6 @@
-package com.springSecurityUpdated.springSecurityUpdated.config;
+package RESTfulBlog.config;
 
+import RESTfulBlog.config.OurUserInfoUserDetailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;

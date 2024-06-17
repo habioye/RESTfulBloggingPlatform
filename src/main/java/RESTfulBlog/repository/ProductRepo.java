@@ -1,7 +1,7 @@
-package com.springSecurityUpdated.springSecurityUpdated.repository;
+package RESTfulBlog.repository;
 
-import com.springSecurityUpdated.springSecurityUpdated.model.Product;
+import RESTfulBlog.model.Blog;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ProductRepo extends JpaRepository<Product, Integer> {
+public interface ProductRepo extends JpaRepository<Blog, Integer> {
 }

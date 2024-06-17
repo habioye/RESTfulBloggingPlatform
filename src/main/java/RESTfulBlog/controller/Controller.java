@@ -1,8 +1,8 @@
-package com.springSecurityUpdated.springSecurityUpdated.controller;
+package RESTfulBlog.controller;
 
-import com.springSecurityUpdated.springSecurityUpdated.model.OurUser;
-import com.springSecurityUpdated.springSecurityUpdated.repository.OurUserRepo;
-import com.springSecurityUpdated.springSecurityUpdated.repository.ProductRepo;
+import RESTfulBlog.model.User;
+import RESTfulBlog.repository.ProductRepo;
+//import com.springSecurityUpdated.springSecurityUpdated.repository.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -16,20 +16,21 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping
 public class Controller {
     @Autowired
-    private OurUserRepo ourUserRepo;
+    private RESTfulBlog.repository.UserRepo userRepo;
     @Autowired
     private ProductRepo productRepo;
     @Autowired
     private PasswordEncoder passwordEncoder;
 
     @GetMapping("/")
-    public String goH0me(){
-        return "This is publickly accesible withing needing authentication ";
+    public String goHome(){
+
+        return "This is publically acceccible without needing authentication ";
     }
     @PostMapping("/user/save")
-    public ResponseEntity<Object> saveUSer(@RequestBody OurUser ourUser){
+    public ResponseEntity<Object> saveUSer(@RequestBody User ourUser){
         ourUser.setPassword(passwordEncoder.encode(ourUser.getPassword()));
-        OurUser result = ourUserRepo.save(ourUser);
+        User result = userRepo.save(ourUser);
         if (result.getId() > 0){
             return ResponseEntity.ok("USer Was Saved");
         }
@@ -42,12 +43,12 @@ public class Controller {
     @GetMapping("/users/all")
     @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseEntity<Object> getAllUSers(){
-        return ResponseEntity.ok(ourUserRepo.findAll());
+        return ResponseEntity.ok(userRepo.findAll());
     }
     @GetMapping("/users/single")
     @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('USER')")
     public ResponseEntity<Object> getMyDetails(){
-        return ResponseEntity.ok(ourUserRepo.findByEmail(getLoggedInUserDetails().getUsername()));
+        return ResponseEntity.ok(userRepo.findByEmail(getLoggedInUserDetails().getUsername()));
     }
 
     public UserDetails getLoggedInUserDetails(){
