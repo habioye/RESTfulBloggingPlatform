@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="217454a8-e82c-4697-b5ee-5b2bb7233276" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/instructions.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/RESTfulBlog/service/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/RESTfulBlog/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RESTfulBlog/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RESTfulBlog/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RESTfulBlog/model/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RESTfulBlog/model/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RESTfulBlog/repository/ProductRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RESTfulBlog/repository/BlogRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2i0r9vQQoD0cjScM0tDZ5Os6T1o" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.SpringSecurityUpdatedApplication.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Genspark/Week_5/RESTfulBloggingPlatform/src",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Genspark\Week_5\RESTfulBloggingPlatform\src" />
+      <recent name="C:\Genspark\Week_5\RESTfulBloggingPlatform\src\main" />
+      <recent name="C:\Genspark\Week_5\RESTfulBloggingPlatform\src\main\java" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Genspark\Week_5\RESTfulBloggingPlatform" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SpringSecurityUpdatedApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.springSecurityUpdated.springSecurityUpdated.SpringSecurityUpdatedApplication" />
+      <module name="springSecurityUpdated" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.springSecurityUpdated.springSecurityUpdated.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SpringSecurityUpdatedApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="217454a8-e82c-4697-b5ee-5b2bb7233276" name="Changes" comment="" />
+      <created>1718638187914</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718638187914</updated>
+    </task>
+    <servers />
+  </component>
+</project>
