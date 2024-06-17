@@ -1,0 +1,6 @@
+Project (Single Dev): Secure Authentication System
+Develop a secure authentication system using Spring Boot Security.
+Implement user authentication with password encryption using Spring Security.
+Configure role-based access control (admin, user) for different endpoints.
+Secure sensitive endpoints and implement CSRF protection.
+Test the authentication and authorization using Postman or Swagger UI

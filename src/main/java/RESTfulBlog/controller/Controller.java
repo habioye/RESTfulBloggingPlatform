@@ -1,7 +1,7 @@
 package RESTfulBlog.controller;
 
 import RESTfulBlog.model.User;
-import RESTfulBlog.repository.ProductRepo;
+import RESTfulBlog.repository.BlogRepo;
 //import com.springSecurityUpdated.springSecurityUpdated.repository.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +18,7 @@ public class Controller {
     @Autowired
     private RESTfulBlog.repository.UserRepo userRepo;
     @Autowired
-    private ProductRepo productRepo;
+    private BlogRepo blogRepo;
     @Autowired
     private PasswordEncoder passwordEncoder;
 
@@ -38,7 +38,7 @@ public class Controller {
     }
     @GetMapping("/product/all")
     public ResponseEntity<Object> getAllProducts(){
-        return ResponseEntity.ok(productRepo.findAll());
+        return ResponseEntity.ok(blogRepo.findAll());
     }
     @GetMapping("/users/all")
     @PreAuthorize("hasAuthority('ADMIN')")
