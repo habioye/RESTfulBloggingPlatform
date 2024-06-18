@@ -16,8 +16,24 @@ public class UserService {
     @Autowired
     UserRepo userRepo;
 
+    public boolean addUser(String email,
+                           String userName,
+                           String password,
+                           String roles) {
+        if (userNameExists(userName)) return false;
+        User user = new User(email, userName, password, roles);
+        userRepo.save(user);
+        return true;
+
+
+    }
+
     public List<User> getAllUsers() {
         return userRepo.findAll();
+    }
+
+    public User getUserById(Integer id) {
+        return userRepo.findById(id).orElse(null);
     }
 
     public boolean userIdExists(Integer id) {
@@ -32,18 +48,6 @@ public class UserService {
         Example<User> example = Example.of(probe);
 
         return userRepo.exists(example);
-
-    }
-
-    public boolean addUser(String email,
-                           String userName,
-                           String password,
-                           String roles) {
-        if (userNameExists(userName)) return false;
-        User user = new User(email, userName, password, roles);
-        userRepo.save(user);
-        return true;
-
 
     }
 
@@ -68,5 +72,6 @@ public class UserService {
        userRepo.deleteById(id);
         return true;
     }
+
 
 }
