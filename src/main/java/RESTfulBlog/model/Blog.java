@@ -18,8 +18,20 @@ public class Blog {
     private int id;
     private String name;
     private String description;
+    private String userName;
 
-    public Blog(String name, String description) {
+    public Blog(String name, String description, String userName) {
+        this.name = name;
+        this.description = description;
+        this.userName = userName;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public int getId() {
