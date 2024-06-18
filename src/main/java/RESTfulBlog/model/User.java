@@ -4,7 +4,7 @@ package RESTfulBlog.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Data
+//@Data
 @Entity
 @Table(name = "User")
 @Setter
@@ -21,6 +21,14 @@ public class User {
     private String userName;
     private String password;
     private String roles;
+
+    public User(String email, String userName, String password, String roles) {
+        this.email = email;
+        this.userName = userName;
+        this.password = password;
+        this.roles = roles;
+    }
+    public User(){}
 
     public String getUserName() {
         return userName;
