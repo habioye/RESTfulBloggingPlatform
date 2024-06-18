@@ -10,21 +10,41 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public  class BlogService  {
+public class BlogService {
     @Autowired
     private BlogRepo blogRepo;
     @Autowired
     private UserRepo userRepo;
 
+    public boolean createBlog(String name, String description, String userName) {
+        Blog blog = new Blog(name, description, userName);
+        blogRepo.save(blog);
+        return true;
 
-    public List<User> getAllUsers() {
-        return userRepo.findAll();
     }
+
     public List<Blog> getAllBlogs() {
         return blogRepo.findAll();
     }
 
+    public Blog getBlogById(Integer id) {
+        return blogRepo.getById(id);
+    }
 
+    public boolean updateBlogById(Integer id,
+                                  String name,
+                                  String description,
+                                  String userName) {
+        Blog blog = new Blog(name,description,userName);
+        blog.setId(id);
+
+        blogRepo.save(getBlogById(id));
+        return true;
+    }
+
+    public boolean deleteBlogById(Integer id) {
+        blogRepo.deleteById(id);
+    }
 
 
 }
