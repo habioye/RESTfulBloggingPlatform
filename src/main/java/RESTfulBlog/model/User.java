@@ -2,15 +2,15 @@ package RESTfulBlog.model;
 
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Data
 @Entity
 @Table(name = "User")
 @Setter
 @Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
 
     @Id
@@ -18,8 +18,17 @@ public class User {
     private int id;
     @Column(unique = true)
     private String email;
+    private String userName;
     private String password;
     private String roles;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     public int getId() {
         return id;
