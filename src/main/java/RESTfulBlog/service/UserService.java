@@ -1,8 +1,6 @@
 package RESTfulBlog.service;
 
-import RESTfulBlog.model.Blog;
 import RESTfulBlog.model.User;
-import RESTfulBlog.repository.BlogRepo;
 import RESTfulBlog.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
@@ -51,6 +49,41 @@ public class UserService {
 
     }
 
+    public boolean updateUserByUserName(String userName) {
+        if (!userNameExists(userName)) return false;
+        User probe = new User();
+        probe.setUserName(userName);
+
+        Example<User> example = Example.of(probe);
+
+
+        Optional<User> optional = userRepo.findOne(example);
+        if (optional.isEmpty())
+            return false;
+
+        userRepo.save((User) optional.get());
+        return true;
+
+    }
+
+    public boolean updateUserById(Integer id) {
+        if (!userIdExists(id)) return false;
+        User probe = new User();
+        probe.setId(id);
+
+        Example<User> example = Example.of(probe);
+
+
+        Optional<User> optional = userRepo.findOne(example);
+        if (optional.isEmpty())
+            return false;
+
+        userRepo.save((User) optional.get());
+
+        return true;
+
+    }
+
     public boolean removeUserByUserName(String userName) {
 
         if (!userNameExists(userName)) return false;
@@ -60,8 +93,8 @@ public class UserService {
         Example<User> example = Example.of(probe);
 
 
-        Optional optional = userRepo.findOne(example);
-        if (!optional.isPresent())
+        Optional<User> optional = userRepo.findOne(example);
+        if (optional.isEmpty())
             return false;
 
         userRepo.delete((User) optional.get());
